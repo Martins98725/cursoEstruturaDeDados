@@ -1,3 +1,5 @@
+package Algoritmos;
+
 import java.util.HashMap;
 import java.util.Map;
 

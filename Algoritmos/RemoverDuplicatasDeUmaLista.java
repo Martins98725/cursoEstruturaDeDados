@@ -1,3 +1,5 @@
+package Algoritmos;
+
 import java.util.Arrays;
 
 public class RemoverDuplicatasDeUmaLista {
