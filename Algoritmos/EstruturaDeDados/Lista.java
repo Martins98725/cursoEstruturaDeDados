@@ -1,16 +1,24 @@
 package Algoritmos.EstruturaDeDados;
 
-public class Vetor {
+import java.lang.reflect.Array;
+
+public class Lista<T> {
     //String
-    private Object[] elementos;
+    private T[] elementos;
     private int tamanho;
 
-    public Vetor(int capacidade) {
-        this.elementos = new Object[capacidade];
+    public Lista(int capacidade) {
+        this.elementos = (T[]) new Object[capacidade];
         this.tamanho = 0;
     }
 
-    public void adiciona(Object elemento) throws Exception {
+    public Lista(int capacidade, Class<T> tipoClasse)  {
+        this.elementos = (T[]) Array.newInstance(tipoClasse, capacidade);
+        this.tamanho = 0;
+
+    }
+
+    public void adiciona(T elemento) throws Exception {
         this.aumnetaCapacidade();
         if (tamanho < this.elementos.length){
             this.elementos[this.tamanho] = elemento;
@@ -21,7 +29,7 @@ public class Vetor {
     }
 
     //overloadin do metodo
-    public boolean adiciona(int posicao, Object elemento){
+    public boolean adiciona(int posicao, T elemento){
         this.validaPosicao(posicao);
 
         this.aumnetaCapacidade();
@@ -33,12 +41,12 @@ public class Vetor {
 
         this.tamanho++;
 
-      return true;
+        return true;
     }
 
     private void aumnetaCapacidade(){
         if (this.tamanho == elementos.length){
-            Object[] elementosNovos = new Object[this.elementos.length * 2];
+            T[] elementosNovos = (T[]) new Object[this.elementos.length * 2];
             System.arraycopy(this.elementos, 0, elementosNovos, 0, this.elementos.length);
             /*for(int  i = 0; i < this.elementos.length; i++){
                 elementosNovos[i] = this.elementos[i];
@@ -73,7 +81,7 @@ public class Vetor {
         }
         return this.elementos[posicao];
     }
-    public int busca(Object elemento){
+    public int busca(T elemento){
         for (int i = 0; i < this.tamanho; i++) {
             if(this.elementos[i].equals(elemento)){
                 return i;
@@ -109,4 +117,9 @@ public class Vetor {
         }
         //this.elementos[this.elementos.length - 1]  =  elemento;
     }*/
+
+
+
 }
+
+
