@@ -4,13 +4,30 @@ import Algoritmos.EstruturaDeDados.Contato;
 import Algoritmos.EstruturaDeDados.Lista;
 import Algoritmos.EstruturaDeDados.Vetor;
 
-public class Vetor1Teste {
-    public static void main(String[] args)  {
-        //Vetor vetor =  new Vetor(5);
-        Lista<String> vetor = new Lista<>(5);
-        try {
+import java.util.ArrayList;
 
-            vetor.adiciona("Elemento");
+public class Vetor1Teste {
+    public static void main(String[] args) {
+        //Vetor vetor =  new Vetor(5);
+
+
+
+
+        //aula arraylist
+     /*   ArrayList<String> arrayList = new ArrayList<>();
+        arrayList.add("a");
+        arrayList.add("c");
+
+        System.out.println(arrayList);
+
+        arrayList.add(1, "B");
+
+
+
+        System.out.println(arrayList);*/
+
+
+            //vetor.adiciona("Elemento");
 
             /*Contato c1  = new Contato("contato 1", "1234-31344", "contato1@gmail.com");
             Contato c2  = new Contato("contato 2", "1234-3123", "contato2@gmail.com");
@@ -65,10 +82,6 @@ public class Vetor1Teste {
 
             System.out.println(vetor);*/
         }
-        catch (Exception e){
-            System.out.println(e);
-        }
-
      /*   try{
             Vetor vetor =  new Vetor(10);
             vetor.adiciona("elemento 1");
@@ -80,4 +93,3 @@ public class Vetor1Teste {
             System.out.println(e);
         }*/
     }
-}
