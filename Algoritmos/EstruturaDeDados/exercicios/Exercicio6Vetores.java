@@ -11,7 +11,7 @@ public class Exercicio6Vetores {
         Lista<Contato> contatoList = new Lista<>(20);
         Scanner scanner = new Scanner(System.in);
 
-        boolean rodando = true;
+        /*boolean rodando = true;
 
         while (rodando) {
             System.out.println("[1] Adicionar contato ");
@@ -53,7 +53,18 @@ public class Exercicio6Vetores {
                 default:
                     System.out.println("bye");
             }
-        }
+        }*/
 
+    }
+
+
+    static void criarContatosDinamicamente(int quantitade, Lista<Contato> contatoList) {
+        for (int i = 1; i <= quantitade; i++) {
+            Contato contato = new Contato();
+
+            contato.setNome("Contato " + i);
+            contato.setEmail("contato" + i + "@gmail.com");
+            contato.setTelefone("(11) 555-5555");
+        }
     }
 }
