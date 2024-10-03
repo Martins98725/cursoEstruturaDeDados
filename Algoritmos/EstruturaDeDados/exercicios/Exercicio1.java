@@ -2,11 +2,11 @@ package Algoritmos.EstruturaDeDados.exercicios;
 
 import Algoritmos.EstruturaDeDados.Lista;
 
-public class Excercicio1 {
+public class Exercicio1 {
     public static void main(String[] args) {
         // exercicio para adicionar em metodo de conter na classe Lista
         Lista<String> vetor = new Lista<>(5);
-        try{
+        try {
             vetor.adiciona("a");
             vetor.adiciona("b");
             vetor.adiciona("c");
@@ -14,8 +14,7 @@ public class Excercicio1 {
 
             var existe = vetor.contem("e");
             System.out.println(existe);
-        }
-        catch (Exception e){
+        } catch (Exception e) {
             System.out.println(e.getMessage());
         }
     }

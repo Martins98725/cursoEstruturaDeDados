@@ -18,7 +18,6 @@ public class Lista<T> {
 
     }
 
-
     public void adiciona(T elemento) throws Exception {
         this.aumnetaCapacidade();
         if (tamanho < this.elementos.length) {
@@ -30,6 +29,7 @@ public class Lista<T> {
     }
 
     //overloadin do metodo
+    //metodo para adicionar um elemento numa posição expecifica
     public boolean adiciona(int posicao, T elemento) {
         this.validaPosicao(posicao);
 
@@ -72,7 +72,6 @@ public class Lista<T> {
         return elementos[posicao];
     }
 
-
     public int tamanho() {
         return this.tamanho;
     }
@@ -92,6 +91,13 @@ public class Lista<T> {
             }
         }
         return -1;
+    }
+
+    public T pegar(T elemento) {
+        if (contem(elemento)) {
+            busca(elemento);
+        }
+        return elemento;
     }
 
     public boolean contem(T elemento) {
@@ -116,6 +122,26 @@ public class Lista<T> {
         }
     }
 
+    public void limparElementos() {
+
+       /* //cria um novo array de Object com o mesmo tamanho que o array atual this.elementos. O length retorna o número de elementos no array existente.
+        //opção 1
+        this.elementos = (T[])new Object[this.elementos.length];
+
+        //opção 2
+        //fica a cargo do coletor de lixo do java
+        this.tamanho = 0;*/
+
+        //opção 3
+        this.tamanho = 0;
+        for (int i = 0; i < this.tamanho; i++) {
+            this.elementos[i] = null;
+        }
+        this.tamanho = 0;
+
+    }
+
+
     @Override
     public String toString() {
         StringBuilder s = new StringBuilder();
@@ -131,20 +157,4 @@ public class Lista<T> {
 
         return s.toString();
     }
-
-    /*public void adiciona(String elemento){
-        //intera sobre a  lista para verificar se tem elementos nulos
-        for(int i =0; i < this.elementos.length; i++){
-            //verifica se a posição do vetor está nula, se estiver, adiciona o nosso elemento
-            if(this.elementos[i] == null){
-                this.elementos[i] = elemento;
-                break;
-            }
-        }
-        //this.elementos[this.elementos.length - 1]  =  elemento;
-    }*/
-
-
 }
-
-

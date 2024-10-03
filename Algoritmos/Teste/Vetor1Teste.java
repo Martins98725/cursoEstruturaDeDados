@@ -1,11 +1,5 @@
 package Algoritmos.Teste;
 
-import Algoritmos.EstruturaDeDados.Contato;
-import Algoritmos.EstruturaDeDados.Lista;
-import Algoritmos.EstruturaDeDados.Vetor;
-
-import java.util.ArrayList;
-
 public class Vetor1Teste {
     public static void main(String[] args) {
         //Vetor vetor =  new Vetor(5);
