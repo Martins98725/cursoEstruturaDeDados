@@ -76,7 +76,7 @@ public class Lista<T> {
         return this.tamanho;
     }
 
-    public Object busca(int posicao) {
+    public T busca(int posicao) {
         if (!(posicao >= 0 && posicao <= this.tamanho)) {
             throw new IllegalArgumentException("Posição inválida");
         }
